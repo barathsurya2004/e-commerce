@@ -30,9 +30,9 @@ const App = () => {
     <div className="categories-container">
       {catagories.map((ele) => {
         return (
-          <div className={`catagory-container ${ele.title}`} key={ele.id}>
+          <div className={`category-container ${ele.title}`} key={ele.id}>
             {/* <img /> */}
-            <div className="catagory-body-container">
+            <div className="category-body-container">
               <h2>{ele.title}</h2>
               <p>SHOP NOW</p>
             </div>

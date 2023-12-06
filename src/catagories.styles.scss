@@ -46,7 +46,7 @@
     }
 }
 
-.catagory-container {
+.category-container {
     display: flex;
     height: 100%;
     border: solid;
@@ -63,14 +63,14 @@
             transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
         }
 
-        & .catagory-body-container {
+        & .category-body-container {
             opacity: 0.8;
         }
     }
 }
 
 
-.catagory-body-container {
+.category-body-container {
     width: fit-content;
     min-width: fit-content;
     padding: 40px;
