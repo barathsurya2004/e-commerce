@@ -1,0 +1,84 @@
+.categories-container {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    justify-content: center;
+    align-items: center;
+
+    // background-color: blue;
+    .Hat {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+    }
+
+    .Jacket {
+        grid-column-start: 3;
+        grid-column-end: span 2;
+    }
+
+    .Sneakers {
+        grid-column-start: 5;
+        grid-column-end: span 2;
+    }
+
+    .Men {
+        grid-column-start: 1;
+        grid-column-end: span 3;
+    }
+
+    .Women {
+        grid-column-start: 4;
+        grid-column-end: span 3;
+    }
+
+    h2 {
+        font-weight: bold;
+        margin: 0 6px 0;
+        font-size: 22px;
+        color: #4a4a4a;
+    }
+
+    p {
+        font-weight: lighter;
+        font-size: 16px;
+    }
+}
+
+.catagory-container {
+    display: flex;
+    height: 100%;
+    border: solid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: fit-content;
+
+    &:hover {
+        cursor: pointer;
+
+        & .background-image {
+            transform: scale(1.1);
+            transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        }
+
+        & .catagory-body-container {
+            opacity: 0.8;
+        }
+    }
+}
+
+
+.catagory-body-container {
+    width: fit-content;
+    min-width: fit-content;
+    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+}
