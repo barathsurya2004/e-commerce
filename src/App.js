@@ -1,47 +1,42 @@
 import './catagories.styles.scss'
+import CategoriesList from './components/Categories-list/categories-list.component.jsx'
 
 
 
 const App = () => {
-  const catagories = [
-    {
-      id: 1,
-      title: "Hat"
-    },
-    {
-      id: 2,
-      title: 'Jacket'
-    },
-    {
-      id: 3,
-      title: 'Sneakers'
-    },
-    {
-      id: 4,
-      title: 'Men'
-    },
-    {
-      id: 5,
-      title: 'Women'
-    }
-  ]
+  const categories =
+    [
+      {
+        "id": 1,
+        "title": "Hats",
+        "imageUrl": "https://i.ibb.co/cvpntL1/hats.png"
+      },
+      {
+        "id": 2,
+        "title": "Jackets",
+        "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png"
+      },
+      {
+        "id": 3,
+        "title": "Sneakers",
+        "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
+      },
+      {
+        "id": 4,
+        "title": "Men",
+        "imageUrl": "https://i.ibb.co/R70vBrQ/men.png"
+      },
+      {
+        "id": 5,
+        "title": "Women",
+        "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png"
+      }
+    ]
+
+
 
   return (
-    <div className="categories-container">
-      {catagories.map((ele) => {
-        return (
-          <div className={`category-container ${ele.title}`} key={ele.id}>
-            {/* <img /> */}
-            <div className="category-body-container">
-              <h2>{ele.title}</h2>
-              <p>SHOP NOW</p>
-            </div>
-          </div>
-        )
-
-      })}
-    </div>
-
+    <CategoriesList catagories={categories} />
   )
 }
 export default App
