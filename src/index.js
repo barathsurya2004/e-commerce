@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom';
+import { IsCartonProvider } from './contexts/cart-dropdown.contex';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <IsCartonProvider>
+        <App />
+      </IsCartonProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

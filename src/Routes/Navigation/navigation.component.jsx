@@ -1,10 +1,12 @@
 import { Outlet, Link } from 'react-router-dom';
-import { Fragment } from 'react';
+import { Fragment, useContext } from 'react';
 import { ReactComponent as Crwnsvg } from '../../assets/crown.svg';
 import './navigation.styles.scss';
 import CartIcon from '../../components/Cart/cart.component';
 import CartDropDown from '../../components/Cart-dropdown/cart-dropdown.component';
+import { IsCartonContext } from '../../contexts/cart-dropdown.contex';
 const Navigation = () => {
+    const { isCartOpen } = useContext(IsCartonContext);
     return (
         <Fragment>
             <div className='navigation'>
@@ -20,7 +22,7 @@ const Navigation = () => {
                     </Link>
                     <CartIcon />
                 </div>
-                <CartDropDown />
+                {isCartOpen && <CartDropDown />}
             </div>
             <Outlet />
         </Fragment>
