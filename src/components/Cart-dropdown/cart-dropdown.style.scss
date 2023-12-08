@@ -15,7 +15,10 @@
         height: 240px;
         display: flex;
         flex-direction: column;
+        -ms-overflow-style: none;
         overflow: scroll;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
     button {
