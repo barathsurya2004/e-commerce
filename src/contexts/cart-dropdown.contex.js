@@ -21,13 +21,33 @@ const checkExistingCartItem = (cartItems, cartItem) => {
 
 }
 
+const removeitem = (cartItems, cartItem) => {
+    const existingItem = cartItems.find((item) => item.id === cartItem.id);
+
+    if (existingItem.stock === 1) {
+        return cartItems.filter((item) => item.id !== existingItem.id);
+    }
+    else {
+        return cartItems.map((item) => {
+            if (item.id === existingItem.id) {
+                return { ...item, stock: item.stock - 1 };
+            }
+            else {
+                return item;
+            }
+        })
+    }
+
+}
+
 
 export const IsCartonContext = createContext({
     isCartOpen: null,
     setIsCartOpen: () => null,
     cartItems: [],
     setCartItems: () => null,
-    addToCartItems: () => null
+    addToCartItems: () => null,
+    removeFromCartItems: () => null
 })
 
 /*
@@ -49,8 +69,12 @@ export const IsCartonProvider = ({ children }) => {
         var temp = checkExistingCartItem(cartItems, cartItem);
         setCartItems(temp);
         console.log(cartItems)
-
+    }
+    const removeFromCartItems = (cartItem, cartItems, setCartItems) => {
+        const temp = removeitem(cartItems, cartItem);
+        setCartItems(temp);
+        console.log(cartItems);
     }
 
-    return <IsCartonContext.Provider value={{ isCartOpen, setIsCartOpen, addToCartItems, cartItems, setCartItems }}>{children}</IsCartonContext.Provider>
+    return <IsCartonContext.Provider value={{ isCartOpen, setIsCartOpen, addToCartItems, cartItems, setCartItems, removeFromCartItems }}>{children}</IsCartonContext.Provider>
 }
