@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { createContext, useState } from "react";
 
 
@@ -47,7 +47,8 @@ export const IsCartonContext = createContext({
     cartItems: [],
     setCartItems: () => null,
     addToCartItems: () => null,
-    removeFromCartItems: () => null
+    removeFromCartItems: () => null,
+    total: 0
 })
 
 /*
@@ -64,6 +65,7 @@ cartItems has {
 export const IsCartonProvider = ({ children }) => {
     const [isCartOpen, setIsCartOpen] = useState(false);
     const [cartItems, setCartItems] = useState([]);
+    const [total, setTotal] = useState(0);
     const addToCartItems = (cartItem, cartItems, setCartItems) => {
         console.log('add to cart has been pressed by ' + cartItem.name);
         var temp = checkExistingCartItem(cartItems, cartItem);
@@ -75,6 +77,9 @@ export const IsCartonProvider = ({ children }) => {
         setCartItems(temp);
         console.log(cartItems);
     }
-
-    return <IsCartonContext.Provider value={{ isCartOpen, setIsCartOpen, addToCartItems, cartItems, setCartItems, removeFromCartItems }}>{children}</IsCartonContext.Provider>
+    useEffect(() => {
+        const temp = cartItems.reduce((acc, item) => acc + item.stock * item.price, 0);
+        setTotal(temp)
+    })
+    return <IsCartonContext.Provider value={{ isCartOpen, setIsCartOpen, addToCartItems, cartItems, setCartItems, removeFromCartItems, total, setTotal }}>{children}</IsCartonContext.Provider>
 }
