@@ -3,8 +3,13 @@ import { ReactComponent as ShoppingIcon } from '../../assets/shopping-bag.svg'
 import { IsCartonContext } from '../../contexts/cart-dropdown.contex';
 import { useContext } from 'react';
 const CartIcon = () => {
-    const { isCartOpen, setIsCartOpen } = useContext(IsCartonContext);
-    const noOfCartItems = 0;
+    const { isCartOpen, setIsCartOpen, cartItems } = useContext(IsCartonContext);
+    const noOfCartItems = cartItems.reduce((acc, item) => {
+        return (
+            acc + item.stock
+        )
+    }, 0);
+
     const changeState = () => {
         if (isCartOpen) {
             setIsCartOpen(false);

@@ -1,6 +1,7 @@
 import './cart-dropdown.style.scss';
 import { IsCartonContext } from '../../contexts/cart-dropdown.contex';
 import { useContext } from 'react';
+import { Cartitem } from '../cart-item/cart-item.component';
 const CartDropDown = () => {
     const { cartItems } = useContext(IsCartonContext);
     console.log(cartItems)
@@ -9,12 +10,7 @@ const CartDropDown = () => {
             <div className='cart-items'>
                 {cartItems.map((item) => {
                     return (
-                        <div>
-                            {/* <img /> */}
-                            <h3>{item.name}</h3>
-                            <span>{item.stock}x{item.price}</span>
-                        </div>
-
+                        <Cartitem item={item} />
                     )
                 })}
             </div>

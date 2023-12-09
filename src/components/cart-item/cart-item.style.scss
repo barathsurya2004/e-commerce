@@ -1,0 +1,21 @@
+.cart-item-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 80px;
+    align-items: center;
+
+    img {
+        width: 30%;
+    }
+
+    .cart-item-detail {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .name {
+        font-size: 16px;
+    }
+}
