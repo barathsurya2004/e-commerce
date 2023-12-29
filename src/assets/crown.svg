@@ -1,11 +1,17 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg height="40px" width="40px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 viewBox="0 0 512.016 512.016" xml:space="preserve">
-<polygon points="145.544,151.36 105.184,31.92 0.68,31.92 0.68,0 128.096,0 175.784,141.136 "/>
-<polygon style="fill:#FFD67F;" points="68.128,124.56 511.336,124.56 426.856,361.584 141.936,361.584 "/>
-<circle cx="377.128" cy="450.56" r="61.456"/>
-<circle cx="191.752" cy="450.56" r="61.456"/>
-<polygon style="fill:#FF583E;" points="322.288,308.816 195.832,180.656 322.288,52.496 443.632,52.496 316.968,180.656 
-	443.632,308.816 "/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="39px" viewBox="0 0 50 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="WiP" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-90.000000, -38.000000)">
+            <g id="Group" transform="translate(90.000000, 38.000000)">
+                <polygon id="Rectangle" fill="#808282" points="3 14 25 26.5 47 14 40.855176 39 9.08421785 39"></polygon>
+                <polygon id="Triangle" fill-opacity="0.262838724" fill="#101A1A" points="25 8 40 39 10 39"></polygon>
+                <circle id="Oval" fill="#5E6363" cx="2" cy="9" r="2"></circle>
+                <circle id="Oval" fill="#5E6363" cx="25" cy="2" r="2"></circle>
+                <circle id="Oval" fill="#5E6363" cx="48" cy="9" r="2"></circle>
+            </g>
+        </g>
+    </g>
 </svg>
