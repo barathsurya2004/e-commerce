@@ -6,9 +6,9 @@ const Shop = () => {
     var shop_data = [];
     const [backend, setBackend] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:8000/data').then((response) => {
-            console.log(response.data);
-            setBackend(response.data)
+        axios.get('https://e-com-db-1efc7-default-rtdb.asia-southeast1.firebasedatabase.app/.json').then((response) => {
+            console.log(response.data[0]);
+            setBackend(response.data[0].items)
         })
     }, [])
 
